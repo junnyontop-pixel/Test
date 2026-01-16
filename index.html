@@ -1,1 +1,29 @@
 <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List - minirang X junnyontop-pixel</title>
+    <!--Google Fonts--><!--Roboto-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <!--Google Fonts--><!--Material Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="input-area"><!--쉬운 레이아웃 제어를 위해-->
+            <input type="text" id="taskInput" placeholder="할 일을 입력하세요...">
+            <button id="addTaskButton">추가</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+    <button id="dark-light" onclick="toggleDarkLightMode()">
+        <span class="material-icons">dark_mode</span>
+    </button>
+</body>
+</html>

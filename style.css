@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    font-weight: bold  ;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    cursor: default;
+}
+#input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#taskInput {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    
+}
+#addTaskButton {
+    background-color: #ececec;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    transition: background-color 0.4s, color 0.4s, transform 0.3s;
+}
+#addTaskButton:hover{
+    background-color: rgb(216, 216, 216);
+    color: black;
+}
+#addTaskButton:active {
+    transform: scale(0.9);
+}
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+#taskList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Dark and light mode styles*/
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+body.dark-mode .container {
+    background-color: #313131;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+body.dark-mode h1 {
+    color: #f4f4f4;
+}
+body.dark-mode #taskInput {
+    background-color: #2a2a2a;
+    color: #f4f4f4;
+    border: 1px solid #444;
+}
+body.dark-mode #taskInput::placeholder {
+    color: #bbb;
+}
+body.dark-mode #addTaskButton {
+    background-color: #555;
+    color: #f4f4f4;
+    border: 1px solid #666;
+}
+body.dark-mode #addTaskButton:hover {
+    background-color: #777;
+    color: #fff;
+}
+body.dark-mode #taskList li {
+    border-bottom: 1px solid #444;
+}
+#dark-light {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0); /*왜 서로 반대로 해야되는지 모르겠지만*/
+}
+#dark-light.dark-mode {
+    background: linear-gradient(135deg, #f39396, #e9c0b4); /*왜 서로 반대로 해야되는지 모르겠지만*/
+}
+#dark-light .material-icons {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+    #input-area{
+        flex-direction: column;
+    }
+    #taskInput {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    #addTaskButton {
+        padding: 8px 17px;
+        border-radius: 12px;
+    }
+    #dark-light {
+        width: 40px;
+        height: 40px;
+        top: 15px;
+        right: 15px;
+    }
+    #dark-light .material-icons {
+        font-size: 20px;
+    }
+}

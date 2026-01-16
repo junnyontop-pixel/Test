@@ -1,1 +1,18 @@
-.
+{
+    "manifest_version": 2,
+    "name": "To-Do List",
+    "version": "1.0",
+    "description": "A simple to-do list application.",
+    "icons": {
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "browser_action": {
+        "default_icon": "icons/icon48.png",
+        "default_title": "To-Do List",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "storage"
+    ]
+}
